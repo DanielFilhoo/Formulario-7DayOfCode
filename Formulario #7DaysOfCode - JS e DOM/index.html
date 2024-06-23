@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jogadores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="banner">
+        <h1>Cadastro de Jogadores</h1>
+    </header>
+    <main>
+        <form class="form js-form">
+            <label for="name">
+                Nome
+                <input class="form-field js-field" id="name" maxlength="120" name="name" required type="text">
+            </label>
+            <label for="birth-date">
+                Data de Nascimento
+                <input class="form-field js-field" id="birth-date" name="birth-date" required type="date">
+                <span class="error-message js-error-birthdate"></span>
+            </label>
+            <label for="email">
+                E-mail
+                <input class="form-field js-field" id="email" name="email" required type="email">
+                <span class="error-message js-error-email"></span>
+            </label>
+            <label for="server">
+                Servidor
+                <select class="form-field js-field" id="server" name="server" required>
+                    <option value="Tenebra">Tenebra</option>
+                    <option value="Dolera">Dolera</option>
+                    <option value="Astera">Astera</option>
+                </select>
+            </label>
+            <button type="submit" class="submit-button">Salvar</button>
+        </form>
+        <table class="people-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th>E-mail</th>
+                    <th>Servidor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody class="people-table-body">
+                <!-- Linhas de dados serão inseridas aqui -->
+            </tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
